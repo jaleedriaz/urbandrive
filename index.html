@@ -73,15 +73,18 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Settings</a></li>
-                        </ul>
-                    </li>
+                    <li class="dropdown-menu">
+						<form id="formLogin" class="form">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle open" style="padding:17px;">Inscription/Connexion <b class="caret"></b></a>
+							<div class="dropdown-menu" style="padding:17px;">
+								<input name="login" type="text" value="Login" />
+								<input name="mdp" type="text" value="Mot de passe" />
+								<input name="submit" type="button" value="Valider" />
+						</form>
+								<li class="divider"></li>
+								<li><a href="#">Inscription</a></li>
+							</div>
+					</li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div>
@@ -98,6 +101,45 @@
 		
 		<!-- Intégration de la libraire de composants du Bootstrap -->
 		<script src="js/bootstrap.min.js"></script>
+	
+	
+	<div class='topbar-wrapper'>
+  <div class='topbar'>
+    <div class='topbar-inner'>
+      <div class='container'>
+        <h3>
+          <a href="/">Webworld</a>
+        </h3>
+        <ul class='nav'>
+          <li>FILLER...</li>
+        </ul>
+        <ul class='nav secondary-nav'>
+          <li class='dropdown' data-dropdown='dropdown'>
+            <a href="#" class="dropdown-toggle">Login</a>
+            <div class='dropdown-menu' id='signin-dropdown'>
+              <form accept-charset="UTF-8" action="/sessions" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="4L/A2ZMYkhTD3IiNDMTuB/fhPRvyCNGEsaZocUUpw40=" /></div>
+                <fieldset class='textbox'>
+                  <label id='js-username'>
+                    <span>Username</span>
+                    <input autocomplete="on" id="username" name="username" type="text" />
+                  </label>
+                  <label id='password'>
+                    <span>Passwort</span>
+                    <input id="userpassword" name="userpassword" type="password" />
+                  </label>
+                </fieldset>
+                <fieldset class='subchk'>
+                  <input name="commit" type="submit" value="Log In" />
+                </fieldset>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+	
 	
 </body>
 </html>
